@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Console", Monaco, monospace;
+  background: url("https://78.media.tumblr.com/abedb2cd56a31c3cce5e98777f983ffe/tumblr_inline_mwbs2sCNxB1qkc0d3.png");
+}
+
+/* So font-awesome displays properly */
+body i {
+ font-family: 'FontAwesome'!important;
+}
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 10em;
+  margin-bottom: 6em;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+  padding: 2.5em;
+  background: white;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+#text {
+  text-align: center;
+}
+
+#text::before {
+  content: '"';
+  position: absolute;
+  left: 0.15em;
+  top: 0.01em;
+  font-size: 5em;
+  font-family: Georgia, Times, serif;
+  opacity: .8;
+}
+
+#author {
+  text-align: right;
+}
+
+#author::before {
+  content: '~ ';
+}
+
+.small-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-quote {
+  border-radius: 10px;
+  outline: none;
+}
+
+#new-quote:hover {
+  background: black;
+  color: white;
+}
+
+#new-quote:active {
+  background: grey;
+  color: white;
+}
+
+/* All stars the same, besides their position.
+Must find way to make this DRY */
+.star-1 {
+  position: absolute;
+  left: 8em;
+  top: 8em;
+  height: 3px;
+  width: 3px;
+  background: white;
+  animation: twinkle 1s linear infinite;
+}
+
+.star-2 {
+  position: absolute;
+  right: 15em;
+  top: 4em;
+  height: 3px;
+  width: 3px;
+  background: white;
+  animation: twinkle 2.5s ease-in infinite;
+}
+
+.star-3 {
+  position: absolute;
+  left: 6em;
+  bottom: 5em;
+  height: 3px;
+  width: 3px;
+  background: white;
+  animation: twinkle 1.75s ease-in-out infinite;
+}
+
+.star-4 {
+  position: absolute;
+  right: 21em;
+  bottom: 3em;
+  height: 3px;
+  width: 3px;
+  background: white;
+  animation: twinkle 1.25s ease-out infinite;
+}
+
+.star-5 {
+  position: absolute;
+  right: 6em;
+  top: 15em;
+  height: 3px;
+  width: 3px;
+  background: white;
+  animation: twinkle 0.75s ease-in infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.01;
+    transform: scale(0.01);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
