@@ -23,7 +23,7 @@ function ajaxHandler(){
         var post = data.shift();
         $('#text').html(post.content);
         $('#author').text(post.title);
-      } ,
+      },
       cache: false
   });
 }
