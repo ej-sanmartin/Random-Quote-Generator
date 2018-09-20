@@ -16,7 +16,7 @@ body i {
   flex-direction: column;
   border: 1px solid black;
   margin: auto;
-  margin-top: 10em;
+  margin-top: 12em;
   margin-bottom: 6em;
   top: 0;
   right: 0;
@@ -72,6 +72,18 @@ body i {
 #new-quote:active {
   background: grey;
   color: white;
+}
+
+.github-link a {
+  position:absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+}
+
+.github-link a:hover {
+  color: grey;
+  text-decoration: none;
 }
 
 /* All stars the same, besides their position.
@@ -131,9 +143,18 @@ Must find way to make this DRY */
     opacity: 0.01;
     transform: scale(0.01);
   }
-  
+
   100% {
     opacity: 1;
     transform: scale(1.5);
+  }
+}
+
+/* Mobile Devices */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #quote-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
   }
 }
