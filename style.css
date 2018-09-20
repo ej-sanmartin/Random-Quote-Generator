@@ -6,7 +6,7 @@ body {
   background: url("https://78.media.tumblr.com/abedb2cd56a31c3cce5e98777f983ffe/tumblr_inline_mwbs2sCNxB1qkc0d3.png");
 }
 
-/* So font-awesome displays properly */
+/* So font-awesome icons displays properly */
 body i {
  font-family: 'FontAwesome'!important;
 }
@@ -74,8 +74,9 @@ body i {
   color: white;
 }
 
+
 .github-link a {
-  position:absolute;
+  position: absolute;
   bottom: 10px;
   right: 10px;
   color: white;
@@ -152,9 +153,12 @@ Must find way to make this DRY */
 
 /* Mobile Devices */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+      overflow-x: hidden;
+      width: 100%;
+  }
+
   #quote-box {
-    margin-left: auto;
-    margin-right: auto;
     width: 340px;
   }
 }
